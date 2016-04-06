@@ -18,6 +18,7 @@ mongo.connect(process.env.MONGOLAB_URI || url, function (err, db) {
     
     app.get('/urls/new', function (req, res) {
     	var fullUrl = req.query.fullUrl;
+        console.log(fullUrl);
         if(validUrl(fullUrl)) {
             var urlDocument = {
                 originalUrl: fullUrl,
