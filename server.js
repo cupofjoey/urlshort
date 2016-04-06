@@ -13,7 +13,7 @@ mongo.connect(process.env.MONGOLAB_URI || url, function (err, db) {
     var urlCollection = db.collection('urls');
 
 	app.get('/', function (req, res) {
-		res.send("Hi! Simply type in: /urls/new?fullURLs='url you want to add' in order to make it work. You add in the short url and you're redeirected!")
+		res.sendFile(__dirname + "/index.html");
 	});
     
     app.get('/urls/new', function (req, res) {
