@@ -36,7 +36,7 @@ app.use(function(req, res, next) {
             });
 
         } else {
-            res.send("Bad!");
+            res.status(400).send("Error, this is an invalid format!");
         }
 
     });
